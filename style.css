@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.page1{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(43, 24, 24);
+    /* background: linear-gradient(blue,red,yellow); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -999;
+    position: relative;
+}
+.page1 .dg-clock{
+    width: 40%;
+    height: 39%;
+    background-color: rgb(27, 27, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: rgba(15, 20, 25, 1);
+    border-radius: 2vmax;
+    /* position: absolute; */
+    position: relative;
+    /* z-index: 999; */
+    /* overflow: hidden; */
+}
+.page1 .dg-clock::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(45deg,rgb(36, 36, 102),rgb(138, 105, 43),rgb(25, 201, 25));
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    border-radius: 2vmax;
+    filter: blur(10px);
+    animation: round 5s ease infinite;
+    /* overflow: hidden; */
+
+}
+@keyframes round {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+    
+}
+.dg-hours{
+   font-size: 20vmax;
+    background: -webkit-linear-gradient(90deg,blue,white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* z-index: 1; */
+}
+.dg-dot{
+    display: flex;
+}
+h3{
+    color: white;
+    font-size: 10vmax;
+    transform: translateY(3px);
+    border-radius: 1vmax;
+}
+.dg-m{
+    font-size: 10vmax;
+    transform: translateY(10px);
+    background: -webkit-linear-gradient(90deg,orchid,white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.dg-sp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmax;
+    transform: translateY(-12px);
+}
+.dg-p{
+    background: -webkit-linear-gradient(90deg,aqua,white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.dg-s{
+    color: white;
+    background: -webkit-linear-gradient(90deg,green,white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
